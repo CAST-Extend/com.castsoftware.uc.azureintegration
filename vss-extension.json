@@ -1,0 +1,75 @@
+{
+    "manifestVersion": 1,
+    "id": "CAST-AIP-AZURE-PIPELINE-TASKS",
+    "name": "CAST AIP Azure Pipeline Tasks",
+    "version": "1.0.0",
+    "publisher": "CAST-LTI",		
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "This extension from CAST software is to be used to automate appliction rescans, verify the rescanned results,set up a CAST Quality Gate and to move CAST violations as Bugs on Azure Devops",
+    "categories": [
+         "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"        
+    },
+    "files": [  
+        {
+            "path": "AIP_Console_App_Creation"
+        }   ,  
+        {
+            "path": "Rescan_And_Results_Verification"
+        }   , 
+		{
+            "path": "Quality_Gate"
+        },
+		{
+            "path": "Action_Plan_To_Azure_Bugs"
+        }
+    ],
+    "contributions": [  
+        {
+            "id": "Console_App_Creation_Task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "AIP_Console_App_Creation"				
+            }
+        },
+        {
+            "id": "Rescan_And_Results_Verification_Task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Rescan_And_Results_Verification"				
+            }
+        },     
+		{
+            "id": "Quality_Gate_Task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Quality_Gate"				
+            }
+        },
+		{
+            "id": "Action_Plan_To_Azure_Bugs_Task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Action_Plan_To_Azure_Bugs"				
+            }
+        }
+    ]
+}
